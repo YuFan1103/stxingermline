@@ -71,16 +71,10 @@ sce <- FindClusters(sce, resolution = 0.5)
 sce <- RunUMAP(sce, dims = 1:30)
 
 cluster_cells <- Cells(sce)[sce$orig.ident == "T60"]
-
-set.seed(123) # set seed
-sampled_cells <- sample(cluster_cells, size = 40, replace = FALSE)
-
-subset_seurat <- subset(sce, cells = sampled_cells)
-DimPlot(subset_seurat,pt.size = 2)
-DimPlot(sce, group.by = "orig.ident")
+sampled_cells <- sample(cluster_cells, size = 40,replace = FALSE)
 cluster2_cells <- Cells(sce)[sce$orig.ident == "T1"]
 combined_cells <- c(sampled_cells, cluster2_cells)
-RunUMAP(subset_seurat, dims = 1:10, perplexity=5)
+subset_seurat <- subset(sce, cells = combined_cells)
 DimPlot(subset_seurat,reduction = "umap")
 
 #plots for figure 4 (not all plots were used in paper)
