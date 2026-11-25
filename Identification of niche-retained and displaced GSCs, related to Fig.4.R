@@ -77,7 +77,7 @@ combined_cells <- c(sampled_cells, cluster2_cells)
 subset_seurat <- subset(sce, cells = combined_cells)
 DimPlot(subset_seurat,reduction = "umap")
 
-#plots for figure 4 (not all plots were used in paper)
+#plots (not all plots were used in paper)
 
 FeaturePlot(subset_seurat, genes = c("stg","piwi","how","zpg","bam","kmg","aly","Rbp4"))
 do_FeaturePlot(subset_seurat, features = c("stg","piwi","how","zpg","bam","kmg","aly","Rbp4"))
