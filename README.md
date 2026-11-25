@@ -60,6 +60,8 @@ with the submission; the token is available in main manuscript of this study.
 
 # Overview
 
+All scripts were executed in RStudio on a [Windows 11] workstation. Full pipeline (scripts 1–3) wall time: approximately [6] h; script 1 ≈ [4] h, script 2 ≈ [1] h, script 3 ≈ [30] min.
+
 Step 1: Load the filtered feature-barcode matrices of T1 and T60 and combine the
 young (T1) and aged (T60) datasets into a single object, `T1.combined`.
 
